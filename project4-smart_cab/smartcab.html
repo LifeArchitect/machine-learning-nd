@@ -12081,7 +12081,7 @@ Run the agent.py file after setting the flags from projects/smartcab folder inst
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Efficiency/Reliability: 'waypoint' &amp;'deadline' are most relevant because they indicate the direction in which the smartcab should be traveling to reach its correct destination using the fastest route before its deadline.</p>
+<p><strong>Answer:</strong> Efficiency/Reliability: 'waypoint' is most relevant because they indicate the direction in which the smartcab should be traveling to reach its correct destination using the fastest route. I plan not to use the deadline in my state (it will make it extremely tough to get good ratings). If we were to include the deadline into our current state, our state space would blow up, we would suffer from the curse of dimensionality and it would take a long time for the q-matrix to converge.</p>
 <p>Safety: Everything in 'inputs', namely: 'oncoming' because it would be unsafe to travel on a road opposite the intersection where cars are traveling in the opposite direction.'light' because it is unsafe to run red-lights. 'left' and 'right' because it should not turn if a vehicle is present.</p>
 
 </div>
@@ -12118,8 +12118,7 @@ Run the agent.py file after setting the flags from projects/smartcab folder inst
 <p>3) 'left': None, Present (2)</p>
 <p>4) 'right': None, Present (2)</p>
 <p>5) 'oncoming': None, Present (2)</p>
-<p>6) 'deadline': integer (d)</p>
-<p>Total Number Of States: 4 x 2 x 2 x 2 x 2 x d = 64d</p>
+<p>Total Number Of States: 4 x 2 x 2 x 2 x 2 = 64</p>
 
 </div>
 </div>
